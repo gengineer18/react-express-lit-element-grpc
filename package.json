@@ -4,32 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon src/server/server.js  --exec babel-node",
+    "server": "nodemon src/server/server.ts --exec babel-node",
     "client": "webpack-dev-server --config ./config/webpack.config.dev.js",
     "build": "webpack --config ./config/webpack.config.js --mode production",
     "dev": "NODE_ENV=development concurrently \"npm run client\" \"npm run server\"",
     "start": "NODE_ENV=production npm run build && npm run server",
     "precommit": "lint-staged",
     "lint": "eslint src --fix -c .eslintrc.json 'src/**/*.js'"
-  },
-  "vendorCopy": [
-    {
-      "from": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
-      "to": "public/vendor/custom-elements-es5-adapter.js"
-    },
-    {
-      "from": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
-      "to": "public/vendor/webcomponents-bundle.js"
-    }
-  ],
-  "pre-commit": [
-    "lint-staged"
-  ],
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "author": "",
   "license": "ISC",
@@ -56,7 +37,11 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9",
+    "html-webpack-harddisk-plugin": "^1.0.1",
+    "lit-element": "^2.3.1",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.9.3"
   },
   "dependencies": {
     "config": "^3.3.1",

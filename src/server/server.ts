@@ -1,6 +1,6 @@
 import express from 'express';
-import path from 'path';
 import config from 'config';
+const path = require('path')
 
 const app = express();
 
