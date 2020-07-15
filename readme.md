@@ -7,5 +7,5 @@ https://qiita.com/ohs30359-nobuhara/items/bdc06b2db1bef7af2439
 (logging, Test(mocha)の導入は実施無し)
 
 ## 参考(Lit-element / Webpack)
-webpack-lit-element-sample
-https://github.com/pocka/webpack-lit-element-sample
+LitElement-TypeScript-and-Webpack-Example
+https://github.com/abenz1267/LitElement-TypeScript-and-Webpack-Example
